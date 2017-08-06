@@ -1,0 +1,7 @@
+MB Flow Outlet   | 20h | ok  |  7.1 | 47 degrees C
+MB Flow Inlet    | 21h | ok  |  7.1 | 30 degrees C
+CPU0_DTS         | 22h | ok  |  7.1 | -47 unspecified
+CPU1_DTS         | 23h | ok  |  7.1 | -48 unspecified
+MEM_Temp         | 24h | ok  |  3.1 | 32 degrees C
+PCH_Temp         | 25h | ok  |  3.1 | 52 degrees C
+Sys Ambient      | 26h | ns  |  7.1 | 28 degrees C

@@ -1,0 +1,4 @@
+Sys Fan 1        | 44h | ok  | 29.1 | 5504 RPM
+Sys Fan 2        | 45h | ok  | 29.2 | 5632 RPM
+Sys Fan 3        | 46h | ok  | 29.3 | 5632 RPM
+Sys Fan 4        | 47h | nr  | 29.4 | 5504 RPM

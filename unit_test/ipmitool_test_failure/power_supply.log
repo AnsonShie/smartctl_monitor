@@ -1,0 +1,4 @@
+PS0 Status       | 0Bh | ok  | 10.3 | Presence detected
+PS1 Status       | 0Ch | ok  | 10.4 | Presence detected
+PSU Power In     | 51h | nc  | 10.1 | 88 Watts
+PSU Voltage In   | 52h | ok  | 10.2 | 12 Volts

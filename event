@@ -1,0 +1,10 @@
+yum install perl-Time-HiRes
+
+/etc/sudoers
+nagios ALL=(ALL) NOPASSWD:/home/persp/system-monitor/ipmitool_monitor.py
+nagios ALL=(ALL) NOPASSWD:/home/persp/system-monitor/smartctl_monitor.py
+
+99-scsi.rules
+SUBSYSTEM=="scsi_disk",ACTION=="add",RUN="/usr/bin/python /home/persp/system-monitor/disk_plug_in_out.py"
+SUBSYSTEM=="scsi_disk",ACTION=="remove",RUN="/usr/bin/python /home/persp/system-monitor/disk_plug_in_out.py"
+

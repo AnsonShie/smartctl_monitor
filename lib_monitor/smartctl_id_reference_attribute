@@ -1,0 +1,58 @@
+        "2" : "VALUE", # Throughput Performance
+		"3" : "VALUE", # Spin Up Time
+		"4" : "RAW_VALUE", # Start Stop Count
+		"5" : "RAW_VALUE", # Re-allocated Sector Count
+		"7" : "RAW_VALUE", # Seek Error Rate
+		"8" : "VALUE", # Seek Time Performance
+		"9" : "RAW_VALUE", # Power-On Hours Count
+		"10" : "RAW_VALUE", # Spin Retry Count
+		"11" : "RAW_VALUE", # Calibration Retry Count
+		"12" : "RAW_VALUE", # Power Cycle Count
+		"22" : "VALUE", # Internal Environment status (Current Helium Level)
+		"168" : "RAW_VALUE", # SATA PHY Error Count
+		"170" : "VALUE", # Reserved Block Count
+		"171" : "VALUE", # Program Fail Count
+		"172" : "VALUE", # Erase Fail Count
+		"173" : "RAW_VALUE", # Average Block-Erase Count
+		"174" : "RAW_VALUE", # Unexpected Power Loss
+		"175" : "VALUE", # Power Loss Protection Failure
+		"177" : "VALUE", # Wear Leveling Count
+		"179" : "VALUE", # Used Reserved Block Count (Total)
+		"180" : "VALUE", # Unused Reserved Block Count (Total)
+		"181" : "RAW_VALUE", # Program Fail Count (Total)
+		"182" : "RAW_VALUE", # Erase Fail Count (Total)
+		"183" : "RAW_VALUE", # SATA Downshift Count (FW 4Px10362 and later)
+		"184" : "VALUE", # End-to-End Error Detection Count
+		"187" : "RAW_VALUE", # Uncorrectable Error Count
+		"188" : "RAW_VALUE", # Command Timeouts
+		"189" : "RAW_VALUE", # High Fly Writes
+		"191" : "RAW_VALUE", # G-Sense Error Rate
+		"192" : "RAW_VALUE", # Power-Off Retract Count (Unsafe Shutdown Count)
+		"193" : "RAW_VALUE", # Load Cycle Count
+		"194" : "RAW_VALUE", # Temperature device
+		"195" : "RAW_VALUE", # ECC Error Rate
+		"196" : "RAW_VALUE", # Reallocation Event Count
+		"197" : "RAW_VALUE", # Pending Sector Count
+		"198" : "RAW_VALUE", # SMART Offline Scan Uncorrectable Error Count
+		"199" : "RAW_VALUE", # CRC Error Count (FW 4Px10362 and later)
+		"202" : "VALUE", # SSD Mode Status
+		"206" : "RAW_VALUE", # Write Error Rate
+		"210" : "RAW_VALUE", # Successful RAIN Recovery Count
+		"212" : "RAW_VALUE", # SATA_PHY_Error
+		"218" : "RAW_VALUE", # CRC Error Count
+		"225" : "RAW_VALUE", # Load_Cycle_Count
+		"226" : "RAW_VALUE", # Timed Workload Media Wear
+		"227" : "RAW_VALUE", # Timed Workload Host Read/Write Ratio
+		"228" : "RAW_VALUE", # Timed Workload Timer
+		"233" : "RAW_VALUE", # Media_Wearout_Indicator
+		"234" : "VALUE", # Thermal Throttle Status
+		"235" : "RAW_VALUE", # Power Recovery Count
+		"241" : "RAW_VALUE", # Total LBAs Written (32MiB)
+		"242" : "RAW_VALUE", # Total LBAs Read (32MiB)
+		"243" : "RAW_VALUE", # Total Bytes Written
+		"244" : "RAW_VALUE", # Average Erase Count
+		"245" : "RAW_VALUE", # Max Erase Count
+		"246" : "RAW_VALUE", # Total Host Sector Writes
+		"247" : "RAW_VALUE", # Number of NAND pages written
+		"248" : "RAW_VALUE", # Number of NAND pages written by FTL
+		"1024" : "VALUE" # ATA error count (custom)

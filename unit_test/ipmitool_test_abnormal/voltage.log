@@ -1,0 +1,11 @@
+PVCCP CPU0       | 30h | ok  |  7.1 | 0.80 Volts
+PVCCP CPU1       | 31h | ok  |  7.1 | 0.82 Volts
+PVTT_CPU0        | 32h | ok  |  7.1 | 1.07 Volts
+PVTT_CPU1        | 33h | ok  |  7.1 | 1.06 Volts
+PVDDQ_AB         | 34h | ok  |  7.1 | 1.38 Volts
+PVDDQ_CD         | 35h | ok  |  7.1 | 1.38 Volts
+PVDDQ_EF         | 36h | ok  |  7.1 | 1.38 Volts
+PVDDQ_GH         | 37h | ok  |  7.1 | 1.37 Volts
+P12V_Sensor      | 38h | ns  |  7.1 | 11.70 Volts
+P3V3_Sensor      | 39h | ok  |  7.1 | 3.25 Volts
+P5V_Sensor       | 3Ah | ok  |  7.1 | 4.82 Volts

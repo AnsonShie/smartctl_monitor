@@ -1,0 +1,88 @@
+define command{
+        command_name    usedspace_python
+        command_line    $USER1$/check_nrpe -H $HOSTADDRESS$ -c check_ipmi
+}
+
+define command{
+        command_name    disk_python
+        command_line    $USER1$/check_nrpe -H $HOSTADDRESS$ -c check_disk
+}
+
+define command{
+        command_name    event_handler_node
+        command_line    /usr/bin/python /opt/system-monitor/event_handler.py --ip $HOSTADDRESS$ --type node --state $SERVICESTATEID$ --hoststatetype $SERVICESTATETYPE$ --input $LONGSERVICEOUTPUT$
+}
+
+define command{
+        command_name    event_handler_disk
+        command_line    /usr/bin/python /opt/system-monitor/event_handler.py --ip $HOSTADDRESS$ --type disk --state $SERVICESTATEID$ --hoststatetype $SERVICESTATETYPE$ --input $SERVICEOUTPUT$,none --long_input $LONGSERVICEOUTPUT$,none
+}
+
+define command{
+        command_name    event_handler_network
+        command_line    /usr/bin/python /opt/system-monitor/event_handler.py --ip $HOSTADDRESS$ --type network --state $SERVICESTATEID$ --hoststatetype $SERVICESTATETYPE$ --input $SERVICEOUTPUT$
+}
+
+
+define service{
+        use                        generic-service
+        host_name                  persp-1.persp.net
+        service_description        smartctl
+        check_period    24x7
+        check_interval  0.1
+        check_command   disk_python
+        event_handler   event_handler_disk
+        max_check_attempts      1
+        active_checks_enabled   1
+        passive_checks_enabled  1
+        normal_check_interval   5
+        retry_check_interval    1
+        notification_interval       10
+        notification_options    w,u,c,r,f,s
+        check_freshness 0
+
+}
+
+define service{
+        use                        generic-service
+        host_name                  persp-1.persp.net
+        service_description        ipmitool
+        check_period    24x7
+        check_interval  0.1
+        check_command   usedspace_python
+        max_check_attempts 2
+        event_handler   event_handler_node
+}
+
+define service{
+	name	passive_service
+	use	generic-service
+	max_check_attempts	1
+	active_checks_enabled	0
+	passive_checks_enabled	1
+	normal_check_interval	5
+	retry_check_interval	1
+	notification_interval       10
+	notification_options	w,u,c,r,f,s
+}
+define service{
+	use	passive_service
+	host_name	persp-1.persp.net
+	service_description	Check_disk_plug_in_out
+	check_freshness	0
+        check_command event_handler_disk
+	notifications_enabled	1
+	max_check_attempts	1
+	event_handler	event_handler_disk_plug_in_out
+}
+define service{
+        use     passive_service
+        host_name       persp-1.persp.net
+        service_description     Check_interface_state
+        check_freshness 0
+        check_command event_handler_network
+        notifications_enabled   1
+        max_check_attempts      1
+        event_handler   event_handler_network
+}
+
