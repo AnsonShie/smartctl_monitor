@@ -309,7 +309,7 @@ def execute_cmd_in_cluster(command_string, node_ips, user):
 
 
 if __name__ == '__main__':
-    ssh_test = execute_ssh_cmd('127.0.0.1', username='neo', password='neo@csabd')
+    ssh_test = execute_ssh_cmd('127.0.0.1', username='test', password='test')
     result, log = ssh_test.exe('ls')
     ssh_test.close()
     cmd_result = execute_sys_cmd('ls')
