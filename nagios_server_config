@@ -26,7 +26,7 @@ define command{
 
 define service{
         use                        generic-service
-        host_name                  persp-1.persp.net
+        host_name                  host-1
         service_description        smartctl
         check_period    24x7
         check_interval  0.1
@@ -45,7 +45,7 @@ define service{
 
 define service{
         use                        generic-service
-        host_name                  persp-1.persp.net
+        host_name                  host-1
         service_description        ipmitool
         check_period    24x7
         check_interval  0.1
